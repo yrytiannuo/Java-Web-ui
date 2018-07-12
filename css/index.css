@@ -1,0 +1,83 @@
+/*新添*/
+.noe_logo{
+	text-align: center;
+	margin-top: 20px;
+}
+.noe_logo img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.noe_logo > p{
+	color:#fff;
+}
+.noe_menu .right.menu{
+	margin-right: 20px;
+}
+#context1,#context2{
+	display: none;
+}
+.noe_center_btn{
+	text-align: center;
+}
+.ui.orange.message {
+	text-align: center;
+}
+@media screen and (min-width: 420px){
+	.noe_img{
+		margin-right: 20px;
+	}
+}
+.noe_btn{
+	width: 205px;
+	margin:0 auto;
+}
+.noe_forms{
+	width: 100%;
+}
+.noe_modal3 textarea{
+	width: 100%;
+	height: 400px;
+}
+/*管理申请表*/
+.noe_sections_buttons{
+	display: inline;
+	margin-left: 50%;
+}
+@media screen and (max-width: 870px){
+	.noe_sections_buttons{
+		display: inline-block;
+		margin-left: 0%;
+	}
+}
+.ui.attached .ui.message .label{
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+/*覆盖、重写*/
+.ui.items>.item>.image:not(.ui) {
+    width: 75px;
+}
+
+.ui.items>.item>.content>.header:not(.ui){
+	margin-top: 20px;
+}
+.noe_card {
+	overflow: hidden;
+}
+.noe_card .card{
+	float:left;
+	margin-right: 20px;
+}
+.noe_card .card:first-child{
+	margin-top: 14px;
+}

@@ -1,0 +1,27 @@
+body{
+	overflow:hidden;
+}
+.main{
+	position: absolute;
+    left: 50%;
+    margin-left: -175px
+}
+.tag{
+	text-align: center;
+	font-size: 7rem;
+	font-weight: bold;
+	margin-top: 90px !important;
+}
+.tag span:first-child{
+	color:#4285f5;
+}
+.tag span:nth-child(2){
+	color:#eb4234;
+}
+.tag span:nth-child(3){
+	color:#fbbd04;
+}
+.noe_form{
+	width: 350px;
+	margin:0 auto;
+}

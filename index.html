@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Suprise Management Function System</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="static/semantic/semantic.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 侧边栏 -->
+	<div class="ui visible sidebar left inverted vertical menu noe_aside">
+	    <h2 class="ui orange header">
+		  <div class="content noe_logo">
+		  <img src="images/logo.jpg">
+		    FMS
+		    <p>Check out our plug-in marketplace</p>
+		  </div>
+		</h2>
+	    <div class="item">
+	    	Home
+	    	<i class="home icon"></i>
+	    </div>
+	    <div class="item">
+	    	Sections
+	    	<i class="bar chart icon"></i>
+	    </div>
+	    <div class="item">
+	    	Superman ability
+	    	<i class="spy icon"></i>
+	    </div>
+  	</div>
+  	<!-- 主体 -->
+  	<div class="pusher">
+  		<!-- 一级菜单 -->
+  		<div class="ui menu noe_menu">
+  			<div class="header item" id="menu">
+  				<i class="content icon"></i>
+  			</div>
+  			<div class="item noe_item">Home</div>
+  			<div class="right menu">
+			    <a class="ui item">
+			    	登出
+			    </a>
+			</div>
+  		</div>
+  		<!-- 欢迎回来消息框 -->
+  		<div class="ui orange message">
+		  <i class="close icon"></i>
+		  <div class="header">
+		    欢迎回来！Welcome To Home!
+		  </div>
+		  <p class="userinfo_name">叶义武</p>
+		</div>
+  		<!-- 二级菜单 选项卡 -->
+		<div>
+			<div id="context0">
+			  <div class="ui tabular secondary menu">
+			    <a class="item active" data-tab="first">个人信息</a>
+			    <a class="item" data-tab="second">我的部门</a>
+			    <!-- <a class="item " data-tab="third">我的小组</a> -->
+			  </div>
+			  <div class="ui tab segment active" data-tab="first">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="first/a">基本信息</a>
+			      <a class="item" data-tab="first/b">社交信息</a>
+			      <a class="item" data-tab="first/c">工作信息</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="first/a">
+			    	<!-- 个人卡片 -->
+			    	<div class="ui centered card">
+					  <div class="image">
+					    <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+					  </div>
+					  <div class="content">
+					    <a class="header userinfo_name">叶义武</a>
+					  </div>
+					</div>
+					<!-- 信息 -->
+					<div class="ui items">
+					  <div class="item">
+					    <div class="image">
+					      <img src="images/personal1.png">
+					    </div>
+					    <div class="content noe_personal_information">
+					      <a class="header">学历：<span>宇宙魔方学院</span></a>
+					      <div class="description">
+							<p>地址：<span>东北五道口</span></p>
+					        <p>性别：<span>男</span></p>
+					        <p>职业：<span>骚气程序员</span></p>
+					       	<p>城市：<span>东洲</span></p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<!-- 按钮 -->
+					<div class="noe_center_btn">
+						<div class="ui animated button" tabindex="0">
+						  <div class="visible content">更改信息</div>
+						  <div class="hidden content">
+						    <i class="right arrow icon"></i>
+						  </div>
+						</div>
+					</div>
+				 </div>
+			    <div class="ui bottom attached tab segment" data-tab="first/b">
+			    	<!-- 个人卡片 -->
+			    	<div class="ui centered card">
+					  <div class="image">
+					    <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+					  </div>
+					  <div class="content">
+					    <a class="header userinfo_name">叶义武</a>
+					  </div>
+					</div>
+			    	<div class="ui items">
+					  <div class="item">
+					    <div class="image">
+					      <img src="images/personal.png">
+					    </div>
+					    <div class="content">
+					      <a class="header">外在</a>
+					      <div class="meta">
+					        <span>丑出天际、搓到爆炸</span>
+					      </div>
+					      <div class="description noe_soical_information">
+					        <p>20岁、男、未婚；个人喜欢看梦幻西游这种很多人说垃圾的游戏，但我喜欢，因为我就是我，不一样的烟火！人称叶总，风流倜傥、英俊潇洒，还会撩妹，简直无敌！</p>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="item">
+					    <div class="image">
+					      <img src="images/heart.png">
+					    </div>
+					    <div class="content">
+					      <a class="header">内在</a>
+					      <div class="meta">
+					        <span>人们总问我我的高度在那？我总在解释我的高度就是骚，真累！</span>
+					      </div>
+					      <div class="description noe_soical_information">
+					        <p>没有内在品质，但就是骚</p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+			    </div>
+			    <div class="ui bottom attached tab segment" data-tab="first/c">
+			    	<div class="ui two column grid">
+					  	<div class="column">
+						    <div class="ui raised segment">
+						      <a class="ui red ribbon label">工作量</a>
+						      <i class="calendar icon"></i>
+						      <p class="noe_working_information">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+						      <a class="ui blue ribbon label">成长足迹</a>
+						      <i class="tags icon"></i>
+						      <p class="noe_working_information">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</p>
+						    </div>
+					  	</div>
+					  	<div class="column">
+						    <div class="ui raised segment">
+						      <a class="ui orange ribbon label">回顾总结</a>
+						      <i class="tasks icon"></i>
+						      <p class="noe_working_information"></p>
+						      <a class="ui teal ribbon label">想对自己说</a>
+						      <i class="trophy icon"></i>
+						      <p class="noe_working_information"></p>
+						    </div>
+					  	</div>
+					</div>
+				</div>
+			  </div>
+			  <div class="ui tab segment" data-tab="second">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="second/a">部门介绍</a>
+			      <a class="item" data-tab="second/b">部门人员</a>
+			      <a class="item" data-tab="second/c">部门机密</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="second/a">
+			    	<h2 class="ui center aligned icon header">
+					  <i class="circular users icon"></i>
+					  设计部
+					</h2>
+					<div class="ui items">
+					  <div class="item">
+					  	<div class="noe_img">
+					  		<img class="ui bordered image" src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+					  		<img class="ui bordered image" src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+					  	</div>
+					    <div class="content">
+					      <a class="header">简介</a>
+					      <div class="description">
+					        <p>全面负责规划设计部技术及管理工作，负责设计部的工作计划、资金计划、合同管理工作；负责工程施工中的设计变更、技术支持，负责监督本部门工作实施的过程及实施效果，负责与其它相关部门总的协调工作。</p>
+					      </div>
+						  <a class="header">职责</a>
+					      <div class="description">
+					        <p>
+					        	<div class="ui bulleted list">
+								  <div class="item">全面负责设计部各项工作，负有计划、组织、协调、督办的职责；</div>
+								  <div class="item">负责部门的任务下达，制定任务目标、执行原则及部门考核制度；s</div>
+								  <div class="item">负责设计部的工作计划、资金计划、合同管理工作；</div>
+								  <div class="item">组织运作项目前期调研，参与工程项目的规划定位，完成工程项目总体规划；</div>
+								</div>
+					        </p>
+					      </div>
+					      <a class="header">简介</a>
+					      <div class="description">
+					        <p>全面负责规划设计部技术及管理工作，负责设计部的工作计划、资金计划、合同管理工作；负责工程施工中的设计变更、技术支持，负责监督本部门工作实施的过程及实施效果，负责与其它相关部门总的协调工作。</p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<div class="noe_btn">
+						<div class="ui buttons">
+						  <button class="ui button noe_leave_job">我要离职</button>
+						  <div class="or"></div>
+						  <button class="ui positive button noe_promote_job">我要调职</button>
+						</div>
+					</div>
+			    </div>
+			    <div class="ui bottom attached tab segment" data-tab="second/b">
+			    	<div class="ui special cards">
+			    		<!-- card 1 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui inverted button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">叶老板</a>
+						      <div class="meta">
+						        <span class="date">Joined in Sep 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>总经理
+						      </a>
+						    </div>
+					 	</div>
+					 	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					  	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					  	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					  	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					  	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					  	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					  	<!-- card 2 -->
+					  	<div class="card">
+						    <div class="blurring dimmable image">
+						      <div class="ui inverted dimmer">
+						        <div class="content">
+						          <div class="center">
+						            <div class="ui primary button">Learn More</div>
+						          </div>
+						        </div>
+						      </div>
+						      <img src="http://www.semantic-ui.cn/images/avatar/large/jenny.jpg">
+						    </div>
+						    <div class="content">
+						      <a class="header">Team Hess</a>
+						      <div class="meta">
+						        <span class="date">Joined in Aug 2014</span>
+						      </div>
+						    </div>
+						    <div class="extra content">
+						      <a>
+						        <i class="users icon"></i>
+						        炮灰工程师一号
+						      </a>
+						    </div>
+					  	</div>
+					</div>
+			    </div>
+			    <div class="ui bottom attached tab segment" data-tab="second/c">
+			    	<h2 class="ui header">
+					  <img src="http://www.semantic-ui.cn/images/icons/plugin.png">
+					  <div class="content">
+					    部门财务
+					  </div>
+					</h2>
+			    	<div class="ui items">
+					  <div class="item">
+					    <div class="ui small image">
+					      <img src="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+					    </div>
+					    <div class="content">
+					      <div class="header">箭头谷营</div>
+					      <div class="meta">
+					        <span class="price">1200美元</span>
+					        <span class="stay">1 个月</span>
+					      </div>
+					      <div class="description">
+					        <p></p>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="item">
+					    <div class="ui small image">
+					      <img src="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+					    </div>
+					    <div class="content">
+					      <div class="header">巴克的家酿</div>
+					      <div class="meta">
+					        <span class="price">1000美元</span>
+					        <span class="stay">2 周</span>
+					      </div>
+					      <div class="description">
+					        <p></p>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="item">
+					    <div class="ui small image">
+					      <img src="http://www.semantic-ui.cn/images/avatar/large/elliot.jpg">
+					    </div>
+					    <div class="content">
+					      <div class="header">占星术营</div>
+					      <div class="meta">
+					        <span class="price">1600美元</span>
+					        <span class="stay">6 周</span>
+					      </div>
+					      <div class="description">
+					        <p></p>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<h2 class="ui header">
+					  <img src="http://www.semantic-ui.cn/images/icons/plugin.png">
+					  <div class="content">
+					    部门项目工程
+					  </div>
+					</h2>
+					<div class="noe_card">
+						<div class="ui card">
+						  <div class="image">
+						    <img src="http://www.semantic-ui.cn/images/movies/watchmen-horizontal.jpg">
+						  </div>
+						  <div class="content">
+						    <div class="header">Watchmen</div>
+						    <div class="description">
+						      In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+						    </div>
+						  </div>
+						  <div class="ui two bottom attached buttons">
+						    <div class="ui button">
+						      <i class="add icon"></i>
+						      Queue
+						    </div>
+						    <div class="ui primary button">
+						      <i class="play icon"></i>
+						      Watch
+						    </div>
+						  </div>
+						</div>
+						<div class="ui popup">
+						  <div class="header">User Rating</div>
+						  <div class="ui star rating" data-rating="3"></div>
+						</div>
+						<div class="ui card">
+						  <div class="image">
+						    <img src="http://www.semantic-ui.cn/images/movies/watchmen-horizontal.jpg">
+						  </div>
+						  <div class="content">
+						    <div class="header">Watchmen</div>
+						    <div class="description">
+						      In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+						    </div>
+						  </div>
+						  <div class="ui two bottom attached buttons">
+						    <div class="ui button">
+						      <i class="add icon"></i>
+						      Queue
+						    </div>
+						    <div class="ui primary button">
+						      <i class="play icon"></i>
+						      Watch
+						    </div>
+						  </div>
+						</div>
+						<div class="ui popup">
+						  <div class="header">User Rating</div>
+						  <div class="ui star rating" data-rating="3"></div>
+						</div>
+						<div class="ui card">
+						  <div class="image">
+						    <img src="http://www.semantic-ui.cn/images/movies/watchmen-horizontal.jpg">
+						  </div>
+						  <div class="content">
+						    <div class="header">Watchmen</div>
+						    <div class="description">
+						      In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+						    </div>
+						  </div>
+						  <div class="ui two bottom attached buttons">
+						    <div class="ui button">
+						      <i class="add icon"></i>
+						      Queue
+						    </div>
+						    <div class="ui primary button">
+						      <i class="play icon"></i>
+						      Watch
+						    </div>
+						  </div>
+						</div>
+						<div class="ui popup">
+						  <div class="header">User Rating</div>
+						  <div class="ui star rating" data-rating="3"></div>
+						</div>
+						<div class="ui card">
+						  <div class="image">
+						    <img src="http://www.semantic-ui.cn/images/movies/watchmen-horizontal.jpg">
+						  </div>
+						  <div class="content">
+						    <div class="header">Watchmen</div>
+						    <div class="description">
+						      In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+						    </div>
+						  </div>
+						  <div class="ui two bottom attached buttons">
+						    <div class="ui button">
+						      <i class="add icon"></i>
+						      Queue
+						    </div>
+						    <div class="ui primary button">
+						      <i class="play icon"></i>
+						      Watch
+						    </div>
+						  </div>
+						</div>
+						<div class="ui popup">
+						  <div class="header">User Rating</div>
+						  <div class="ui star rating" data-rating="3"></div>
+						</div>
+						<div class="ui card">
+						  <div class="image">
+						    <img src="http://www.semantic-ui.cn/images/movies/watchmen-horizontal.jpg">
+						  </div>
+						  <div class="content">
+						    <div class="header">Watchmen</div>
+						    <div class="description">
+						      In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+						    </div>
+						  </div>
+						  <div class="ui two bottom attached buttons">
+						    <div class="ui button">
+						      <i class="add icon"></i>
+						      Queue
+						    </div>
+						    <div class="ui primary button">
+						      <i class="play icon"></i>
+						      Watch
+						    </div>
+						  </div>
+						</div>
+						<div class="ui popup">
+						  <div class="header">User Rating</div>
+						  <div class="ui star rating" data-rating="3"></div>
+						</div>
+					</div>
+					<h2 class="ui header">
+					  <img src="http://www.semantic-ui.cn/images/icons/plugin.png">
+					  <div class="content">
+					    部门发展
+					  </div>
+					</h2>
+			    </div>
+			  </div>
+			  <!-- <div class="ui tab segment" data-tab="third">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="third/a">小组介绍</a>
+			      <a class="item" data-tab="third/b">小组成员</a>
+			      <a class="item" data-tab="third/c">小组项目</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
+			    <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
+			    <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+			  </div> -->
+			</div>
+			<div id="context1">
+			  <div class="ui tabular secondary menu">
+			    <a class="item active" data-tab="first">部门报表</a>
+			    <a class="item noe_sections_manage" data-tab="second">
+			    	管理部门<div class="floating ui blue label"> ！</div>
+			    </a>
+			  </div>
+			  <div class="ui tab segment active" data-tab="first">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="first/a">报表1</a>
+			      <a class="item" data-tab="first/b">报表2</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="first/a">1A</div>
+			    <div class="ui bottom attached tab segment" data-tab="first/b">1B</div>
+			  </div>
+			  <div class="ui tab segment" data-tab="second">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="second/a">
+			      	调职管理
+			      	<span class="floating ui blue label">22</span>
+			      </a>
+			      <a class="item" data-tab="second/b">
+			      	离职管理
+			      	<span class="floating ui red label">22</span>
+			      </a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="second/a">
+			    	<div class="ui floating message">
+			    		<div class="label">
+					      <img src="http://www.semantic-ui.cn/images/avatar/small/elliot.jpg">
+					    </div>
+						<span>要走的路！</span>
+						<div class="noe_sections_buttons">
+							<button class="ui orange button">查看详情</button>
+							<button class="ui primary button">确认</button>
+							<button class="ui button">丢弃</button>
+						</div>
+					</div>
+			    </div>
+			    <div class="ui bottom attached tab segment" data-tab="second/b">
+			    	<div class="ui floating message">
+			    		<div class="label">
+					      <img src="http://www.semantic-ui.cn/images/avatar/small/elliot.jpg">
+					    </div>
+						<span>要走的路！</span>
+						<div class="noe_sections_buttons">
+							<button class="ui orange button">
+						  	  查看详情
+							</button>
+							<button class="ui red button">
+						  	  确认
+							</button>
+							<button class="ui button">
+							  丢弃
+							</button>
+						</div>
+					</div>
+			    </div>
+			  </div>
+			</div>
+			<div id="context2">
+			  <div class="ui tabular secondary menu">
+			    <a class="item active" data-tab="first">个人信息3</a>
+			    <a class="item" data-tab="second">我的部门</a>
+			    <a class="item " data-tab="third">我的小组</a>
+			  </div>
+			  <div class="ui tab segment active" data-tab="first">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="first/a">1A</a>
+			      <a class="item" data-tab="first/b">1B</a>
+			      <a class="item" data-tab="first/c">1C</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="first/a">1A</div>
+			    <div class="ui bottom attached tab segment" data-tab="first/b">1B</div>
+			    <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
+			  </div>
+			  <div class="ui tab segment" data-tab="second">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="second/a">2A</a>
+			      <a class="item" data-tab="second/b">2B</a>
+			      <a class="item" data-tab="second/c">2C</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="second/a">2A</div>
+			    <div class="ui bottom attached tab segment" data-tab="second/b">2B</div>
+			    <div class="ui bottom attached tab segment" data-tab="second/c">2C</div>
+			  </div>
+			  <div class="ui tab segment" data-tab="third">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="third/a">3A</a>
+			      <a class="item" data-tab="third/b">3B</a>
+			      <a class="item" data-tab="third/c">3C</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
+			    <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
+			    <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+			  </div>
+			</div>
+		</div>
+
+		<!-- 模态框 learn more-->
+		<div class="ui modal noe_modal1">
+		  <i class="close icon"></i>
+		  <div class="header">
+		    基本信息
+		  </div>
+		  <div class="image content">
+		    <div class="ui medium image">
+		      <img src="http://www.semantic-ui.cn/images/avatar/large/chris.jpg">
+		    </div>
+		    <div class="description">
+		      <!-- <div class="ui header">我们为你自动选择了一张资料图片.</div>
+		      <p>我们从抓取的下面这些图片，图像与你注册的邮箱地址相关.</p> -->
+		    </div>
+		  </div>
+		  <div class="actions">
+		    <div class="ui black deny button">
+		      不可以
+		    </div>
+		    <div class="ui positive right labeled icon button">
+		      是的，那是我
+		      <i class="checkmark icon"></i>
+		    </div>
+		  </div>
+		</div>
+		<!-- 模态框 信息填写 -->
+		<div class="ui long text modal transition scrolling noe_modal2">
+		  <i class="close icon"></i>
+		  <div class="header">
+		    信息修改
+		  </div>
+		  <div class="image content">
+		    <div class="noe_forms">
+			 <form class="ui form">
+			  <h4 class="ui dividing header">个人信息</h4>
+			  <div class="field">
+			  	<!-- row1 -->
+			    <div class="two fields">
+			      <div class="field">
+			      	<label>Name</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>学历</label>
+			        <input type="text" name="education" placeholder="中国石油大学（华东）">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="field">
+			    <div class="fields">
+			      <div class="twelve wide field">
+			      	<label>Home Address</label>
+			        <input type="text" name="address" placeholder="地址">
+			      </div>
+			      <div class="four wide field">
+			      	<label>sex</label>
+			        <input type="text" name="sex" placeholder="男 #">
+			      </div>
+			    </div>
+			  </div>
+			  <div class="two fields">
+			    <div class="field">
+			      <label>职业</label>
+			      <input type="text" name="profession" placeholder="骚气程序员">
+			    </div>
+			    <div class="field">
+			      <label>Country</label>
+			      <input type="text" name="country" placeholder="上海">
+			    </div>
+			  </div>
+			  <h4 class="ui dividing header">Social Information</h4>
+			  <div class="field">
+			    <label>外在</label>
+			    <input type="text" name="outer_info" placeholder="外在">
+			  </div>
+			  <div class="field">
+			    <label>内在</label>
+			    <input type="text" name="inner_info" placeholder="内在">
+			  </div>
+			</form>
+			</div>
+		  </div>
+		  <div class="actions">
+		    <div class="ui black deny button">
+		      取消
+		    </div>
+		    <div class="ui positive right labeled icon button noe_revise_information">
+		      确定修改
+		      <i class="checkmark icon"></i>
+		    </div>
+		  </div>
+		</div>
+		<!-- 模态框 我要离职 -->
+		<div class="ui long text modal transition scrolling noe_modal3">
+		  <i class="close icon"></i>
+		  <div class="header">
+		    离职申请
+		  </div>
+		  <div class="image content">
+		    <textarea name="" id=""></textarea>
+		  </div>
+		  <div class="actions">
+		    <div class="ui black deny button">
+		      取消
+		    </div>
+		    <div class="ui positive right labeled icon button">
+		      发送
+		      <i class="checkmark icon"></i>
+		    </div>
+		  </div>
+		</div>
+
+  	</div>
+
+  	<script type="text/javascript" src="static/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="static/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+  	<script>
+  		$('#menu').click(function(){
+  			$('.ui.sidebar').sidebar('toggle');
+  		});
+  		// $('.paths.example .menu .item')
+		  // .tab({
+		  //   context: '.paths.example'
+		  // });
+		$('.tabular.menu .item').tab();
+  	</script>
+</body>
+</html>

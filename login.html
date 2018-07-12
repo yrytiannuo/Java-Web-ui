@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>Suprise Management Function System</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.min.css">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	<div class="main">
+		<p class="tag"><span>S</span><span>M</span><span>F</span></p>
+		<div class="noe_form">
+			<form class="ui form">
+			  <div class="field">
+			    <label>User</label>
+			    <input name="name" type="text" placeholder="例：1607020412">
+			  </div>
+			  <div class="field">
+			    <label>Password</label>
+			    <input name="password" type="password" placeholder="例：noe123456">
+			  </div>
+			  <div class="ui submit blue button" id="noe_submit">Submit</div>
+			  <div class="ui error message"></div>
+			</form>
+		</div>
+	</div>
+	<canvas id="canvas"></canvas>
+	<script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+	<script rel="stylesheet" href="Semantic-UI-CSS-master/semantic.js"></script>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var w,h;
+		var aColor=["#E03636","#FF534D","#25c6FC","#EDD0BE","#7F1874"];
+		var aBubble=[];
+		~function setSize(){
+			w=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
+			h=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
+			// w=w-4;
+			// h=h-4;
+			canvas.width=w;
+			canvas.height=h;
+			window.onresize=arguments.callee;
+		}();
+
+		var canCon = canvas.getContext("2d");
+
+		function random(min,max){	//随机取数
+			return Math.random()*(max-min)+min;
+		}
+
+
+
+		function Bubble(){}	;//构造小球
+		Bubble.prototype={
+
+			init:function(){//基本参数
+				this.x=random(0,w);
+				this.y=random(0,h);
+				this.r=random(0.1,9);	//生成小球的半径
+				this.color=aColor[Math.floor(random(0,5))];
+				this.vx=random(-1,1);
+				this.vy=random(0,1);
+			},
+			draw:function(){
+
+				canCon.save();
+
+				canCon.beginPath();
+
+				canCon.fillStyle=this.color;
+
+				canCon.arc(this.x,this.y,this.r,0,Math.PI*2);
+
+				canCon.fill();
+
+				canCon.restore();
+			},
+			move:function(){
+				this.x+=this.vx;
+				this.y+=this.vy;
+				if(this.x-this.r<0 || this.x+this.r-w>0){
+					this.vx=-this.vx;
+				}
+				if(this.y-this.r<0 || this.y+this.r-h>0){
+					this.vy=-this.vy;
+					// this.y=this.r;
+				}
+				this.draw();
+			}
+		}
+
+		function create(num){
+			for(var i=0;i<num;i++){
+				var bubble=new Bubble();
+				bubble.init();
+				bubble.draw();
+				aBubble.push(bubble);
+			}
+		}
+		create(438);
+
+		setInterval(function(){
+			canCon.clearRect(0,0,w,h);
+			for(var item of aBubble){
+				item.move();
+			}
+			console.log(h);
+		},1000/60);
+	</script>
+	<script src="js/login_ajax.js"></script>
+</body>
+</html>
