@@ -14,9 +14,11 @@ $(document).ready(function(){
 	      .transition('fade');
 	});
 
-	// card hover
-	$('.special.cards .image').dimmer({
-  		on: 'hover'
+	//card hover
+	$('#context0 .ui.tab.segment[data-tab="second"] .ui.top.attached.menu .item[data-tab="second/b"]').on('click',function(){
+		$('.special.cards .image').dimmer({
+	  		on: 'hover'
+		});
 	});
 
 	//card 弹出消息框
@@ -46,7 +48,7 @@ $(document).ready(function(){
 		$('.noe_modal3 .header')[0].innerHTML = "调职申请";
 	});
 	//部长编辑部员信息 模态框
-	$('.noe_people_manage .ui.message .buttons button:first-child').on('click',function(){
+	$('body').on('click','.noe_people_manage .ui.message .buttons button:first-child',function(){
 		$('.ui.modal.noe_modal4').modal('show');
 	});
 	$('.noe_people_manage .ui.red.button').on('click',function(){

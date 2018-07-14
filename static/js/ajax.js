@@ -113,7 +113,35 @@ $(document).ready(function(){
 
 		});
 	});*/
+
+	/*//动态添加部门人员
+	$('#context0 .ui.tab.segment[data-tab="second"] .ui.top.attached.menu .item[data-tab="second/b"]').on('click',function(){
+		//测试
+		var $ele = $("<div class='card'><div class='blurring dimmable image'><div class='ui dimmer transition hidden'><div class='content'><div class='center'><div class='ui inverted button'>Learn More</div></div></div></div><img src='http://www.semantic-ui.cn/images/avatar/large/elliot.jpg'></div><div class='content'><a class='header'>叶老板</a><div class='meta'><span class='date'>Joined in Sep 2014</span></div></div><div class='extra content'><a><i class='users icon'></i>总经理</a></div></div>");
+		$('#context0 .ui.tab.segment[data-tab="second"] .ui.bottom.attached[data-tab="second/b"] .cards').append($ele);
+		});
+		// $.ajax({
+		// 	type: "GET",
+		// 	url: "http://172.24.194.233:8089/获取部门人员信息",
+		// 	dataType: "json",
+		// 	data: {
+		// 		token: window.localStorage.getItem("token")
+		// 	},
+		// 	success: function(data,status){
+		// 		var $ele = $("<div class='card'><div class='blurring dimmable image'><div class='ui dimmer transition hidden'><div class='content'><div class='center'><div class='ui inverted button'>Learn More</div></div></div></div><img src='http://www.semantic-ui.cn/images/avatar/large/elliot.jpg'></div><div class='content'><a class='header'>叶老板</a><div class='meta'><span class='date'>Joined in Sep 2014</span></div></div><div class='extra content'><a><i class='users icon'></i>总经理</a></div></div>");
+		// 		$('#context0 .ui.tab.segment[data-tab="second"] .ui.bottom.attached[data-tab="second/b"]').empty();
+		// 		for(var i=0;i<data.data.length;i++){
+		// 			$('#context0 .ui.tab.segment[data-tab="second"] .ui.bottom.attached[data-tab="second/b"]').append($ele);
+		// 		}
+		// 	},
+		// 	error: function(){
+		// 		alert("发生错误！" + jqXHR.status);
+		// 	}
+		// });
+	});*/
+
 	//第一类功能结束
+
 	//第二类功能开始
 	/*$('.noe_aside .item:nth-child(3)').on('click',function(){
 		$.ajax({
@@ -152,7 +180,7 @@ $(document).ready(function(){
 
 
 
-	/*调试单元
+	/*//调试单元
 		$('#context1 .ui.top.tabular .item[data-tab="second/a"]').on('click',function(){
 		var $ele = $("<div class='ui floating message'><div class='label'><img src='http://www.semantic-ui.cn/images/avatar/small/elliot.jpg'></div><span>要走的路！</span><div class='noe_sections_buttons'><button class='ui orange button'>查看详情</button><button class='ui primary button'>确认</button><button class='ui button'>丢弃</button></div></div>");
 		$('#context1 .ui.bottom[data-tab="second/a"]').append($ele);
@@ -187,7 +215,7 @@ $(document).ready(function(){
 		});
 	});*/
 	/*//部长选择处理调职离职申请 丢弃操作
-	$('.ui.floating.message .noe_sections_buttons .ui.button:last-child').on('click',function(){
+	$('body').on('click','.ui.floating.message .noe_sections_buttons .ui.button:last-child',function(){
 		$(this).closest('.ui.floating.message').remove();
 		$.ajax({
 				type: "POST",
@@ -206,7 +234,7 @@ $(document).ready(function(){
 			});
 	});
 	//确认操作
-	$('.ui.floating.message .noe_sections_buttons .ui.button:nth-child(2)').on('click',function(){
+	$('body').on('click','.ui.floating.message .noe_sections_buttons .ui.button:nth-child(2)',function(){
 		$(this).closest('.ui.floating.message').remove();
 		$.ajax({
 				type: "POST",
@@ -225,7 +253,9 @@ $(document).ready(function(){
 			});
 	});
 	//查看详情
-	$('.ui.floating.message .noe_sections_buttons .ui.button:nth-child(1)').on('click',function(){
+	$('body').on('click','.ui.floating.message .noe_sections_buttons .ui.button:nth-child(1)',function(){
+			//调试
+			$('.ui.modal.noe_modal3').modal('show');
 			$.ajax({
 				type: "GET",
 				url: "http://172.24.194.233:8089/getSiteById",
@@ -288,7 +318,29 @@ $(document).ready(function(){
 			}
 		});
 	 }); */
-
+	 /*//部长编辑部员操作 删除
+	 $('body').on('click','.noe_people_manage .ui.message .buttons button:last-child',function(){
+	 	$(this).closest('.ui.floating.message').remove();
+	 	$.ajax({
+			type: "POST",
+			url: "http://172.24.194.233:8089/getSiteById",
+			dataType: "json",
+			data: {
+				token: window.localStorage.getItem("token"),
+				userid: $('.noe_modal5 input[name="userid"]').val(),
+				username: $('.noe_modal5 input[name="username"]').val(),
+				usersex: $('.noe_modal5 input[name="usersex"]').val(),
+				usersection: $('.noe_modal5 input[name="usersection"]').val()
+			},
+			success: function(data,status){
+				var $ele = $("<div class='ui floating message'><span>" + $('.noe_modal5 input[name="userid"]').val() + "</span><span>" + $('.noe_modal5 input[name="username"]').val() + "</span><span>" + $('.noe_modal5 input[name="usersex"]').val() + "</span><span>" + $('.noe_modal5 input[name="usersection"]').val() + "</span><div class='buttons'><button class='ui primary button'>编辑</button><button class='ui button'>删除</button></div></div>");
+				$('#context1 .noe_people_manage').append($ele);
+			},
+			error: function(){
+				alert("发生错误！" + jqXHR.status);
+			}
+		});
+	 });*/
 
 	//第二类功能结束
 	//第三类功能开始
@@ -316,7 +368,7 @@ $(document).ready(function(){
 	});*/
 
 	//公司财务
-	//公司收入总额
+	/*//公司收入总额
 	$('#context2 .ui.tabular.secondary.menu .item:first-child').on('click',function(){
 		$.ajax({
 			type: "GET",
@@ -332,7 +384,7 @@ $(document).ready(function(){
 				$('.noe_aside .ui.error.message').removeClass("hidden");
 			}
 		});
-	});
+	});*/
 
 
 
