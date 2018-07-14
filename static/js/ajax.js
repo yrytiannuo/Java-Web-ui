@@ -25,6 +25,11 @@ $(document).ready(function(){
 			$('.noe_working_information')[3].innerHTML = userinfo;
 		}*/
 
+	//登出
+	// $('.noe_menu .right.menu .ui.item').on('click',function(){
+	// 	document.location.href = "E:/git/SMF/login.html";
+	// });
+
 
 	/*//修改信息提交
 	$('.noe_revise_information').on("click",function(){
@@ -108,6 +113,43 @@ $(document).ready(function(){
 
 		});
 	});*/
+	//第一类功能结束
+	//第二类功能开始
+	/*$('.noe_aside .item:nth-child(3)').on('click',function(){
+		$.ajax({
+			type: "GET",
+			url: "http://172.24.194.233:8089/getSiteById",
+			dataType: "json",
+			data: {
+				token: window.localStorage.getItem("token")
+			},
+			success: function(data,status){
+				var text = event.target.innerText;
+				var index = $(".noe_aside .item").index(this);
+				$(".noe_menu .noe_item").text(text);
+				$("#context" + index).show().siblings().hide();
+			},
+			error: function(){
+				$('.noe_aside .ui.error.message').removeClass("hidden");
+			}
+		});
+	});*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	/*调试单元
@@ -145,7 +187,7 @@ $(document).ready(function(){
 		});
 	});*/
 	/*//部长选择处理调职离职申请 丢弃操作
-	$('.ui.floating.message .ui.button:last-child').on('click',function(){
+	$('.ui.floating.message .noe_sections_buttons .ui.button:last-child').on('click',function(){
 		$(this).closest('.ui.floating.message').remove();
 		$.ajax({
 				type: "POST",
@@ -164,7 +206,7 @@ $(document).ready(function(){
 			});
 	});
 	//确认操作
-	$('.ui.floating.message .ui.button:nth-child(2)').on('click',function(){
+	$('.ui.floating.message .noe_sections_buttons .ui.button:nth-child(2)').on('click',function(){
 		$(this).closest('.ui.floating.message').remove();
 		$.ajax({
 				type: "POST",
@@ -183,7 +225,7 @@ $(document).ready(function(){
 			});
 	});
 	//查看详情
-	$('.ui.floating.message .ui.button:nth-child(1)').on('click',function(){
+	$('.ui.floating.message .noe_sections_buttons .ui.button:nth-child(1)').on('click',function(){
 			$.ajax({
 				type: "GET",
 				url: "http://172.24.194.233:8089/getSiteById",
@@ -202,11 +244,95 @@ $(document).ready(function(){
 			});
 	});*/
 
+	 /* //部长编辑部门人员
+	 $('#context1 .ui.tabular .item[data-tab="third"]').on('click',function(){
+	 	$.ajax({
+			type: "GET",
+			url: "http://172.24.194.233:8089/getSiteById",
+			dataType: "json",
+			data: {
+				token: window.localStorage.getItem("token"),
+				userid: window.localStorage.getItem("userid")
+			},
+			success: function(data,status){
+				$('#context1 .noe_people_manage').empty();
+				for(var i=0;i<data.data.length;i++){
+					var $ele = $("<div class='ui floating message'><span>" + 1607020412 + "</span><span>" + 叶义武 + "</span><span>" + 男 + "</span><span>" + 设计部 + "</span><div class='buttons'><button class='ui primary button'>编辑</button><button class='ui button'>删除</button></div></div>");
+					$('#context1 .noe_people_manage').append($ele);
+				}
+			},
+			error: function(){
+				alert("发生错误！" + jqXHR.status);
+			}
+		});
+	 });
+	 //部长新增人员确认后
+	 $('.noe_modal5 .actions .ui.positive.right.button').on('click',function(){
+	 	$.ajax({
+			type: "POST",
+			url: "http://172.24.194.233:8089/getSiteById",
+			dataType: "json",
+			data: {
+				token: window.localStorage.getItem("token"),
+				userid: $('.noe_modal5 input[name="userid"]').val(),
+				username: $('.noe_modal5 input[name="username"]').val(),
+				usersex: $('.noe_modal5 input[name="usersex"]').val(),
+				usersection: $('.noe_modal5 input[name="usersection"]').val()
+			},
+			success: function(data,status){
+				var $ele = $("<div class='ui floating message'><span>" + $('.noe_modal5 input[name="userid"]').val() + "</span><span>" + $('.noe_modal5 input[name="username"]').val() + "</span><span>" + $('.noe_modal5 input[name="usersex"]').val() + "</span><span>" + $('.noe_modal5 input[name="usersection"]').val() + "</span><div class='buttons'><button class='ui primary button'>编辑</button><button class='ui button'>删除</button></div></div>");
+				$('#context1 .noe_people_manage').append($ele);
+			},
+			error: function(){
+				alert("发生错误！" + jqXHR.status);
+			}
+		});
+	 }); */
 
 
+	//第二类功能结束
+	//第三类功能开始
 
 
+	//是否有权限产看此类功能
+	/*$('.noe_aside .item:nth-child(4)').on('click',function(){
+		$.ajax({
+			type: "GET",
+			url: "http://172.24.194.233:8089/getSiteById",
+			dataType: "json",
+			data: {
+				token: window.localStorage.getItem("token")
+			},
+			success: function(data,status){
+				var text = event.target.innerText;
+				var index = $(".noe_aside .item").index(this);
+				$(".noe_menu .noe_item").text(text);
+				$("#context" + index).show().siblings().hide();
+			},
+			error: function(){
+				$('.noe_aside .ui.error.message').removeClass("hidden");
+			}
+		});
+	});*/
 
+	//公司财务
+	//公司收入总额
+	$('#context2 .ui.tabular.secondary.menu .item:first-child').on('click',function(){
+		$.ajax({
+			type: "GET",
+			url: "http://172.24.194.233:8089/getSiteById",
+			dataType: "json",
+			data: {
+				token: window.localStorage.getItem("token")
+			},
+			success: function(data,status){
+				
+			},
+			error: function(){
+				$('.noe_aside .ui.error.message').removeClass("hidden");
+			}
+		});
+	});
 
 
 
@@ -267,26 +393,10 @@ $(document).ready(function(){
 
 
 
-	// var request = new XMLHttpRequest();
-	// request.open("GET","");
-	// request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	// request.send();
 
-	// request.onreadystatechange = function(){
-	// 	if(request.readyState === 4){
-	// 		if(request.status === 200){
-	// 			var data = JSON.parse(request.responseText);
-	// 			if(data.success){
-	// 				.innerHTML = data.msg;
-	// 			}else{
-	// 				.innerHTML = "出现错误" + data.msg;
-	// 			}
-	// 		}else{
 
-	// 		}
 
-	// 	}
-	// }
+
 
 
 });

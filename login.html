@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 	<title>Suprise Management Function System</title>
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="Semantic-UI-CSS-master/semantic.min.css">
-	<link rel="stylesheet" href="css/login.css">
+	<link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="static/semantic/semantic.min.css">
+	<link rel="stylesheet" href="static/css/login.css">
 </head>
 <body>
 	<div class="main">
@@ -28,20 +28,20 @@
 			    	<i class="terminal icon"></i>
 			    </div>
 			  </div>
-			  <div class="ui submit blue button" id="noe_submit">Submit</div>
+			  <div class="ui submit blue button" id="noe_submit">Login</div>
 			  <div class="ui error message"></div>
 			</form>
 		</div>
 	</div>
 	<div class="music">
-		<img id="btn" src="images/music.png" alt="">
-		<img src="images/music1.png" alt="">
-		<img src="images/music2.png" alt="">
+		<img id="btn" src="static/images/music.png" alt="">
+		<img src="static/images/music1.png" alt="">
+		<img src="static/images/music2.png" alt="">
 	</div>
-	<audio id="music" src="E:\git\SMF\images\bgm.mp3" autoplay="autoplay" loop controls="true"></audio>
+	<audio id="music" src="E:\git\SMF\static\images\bgm.mp3" autoplay="autoplay" loop controls="true"></audio>
 	<canvas id="canvas"></canvas>
 	<script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
-	<script rel="stylesheet" href="Semantic-UI-CSS-master/semantic.js"></script>
+	<script type="text/javascript" src="static/semantic/semantic.min.js"></script>
 	<script>
 		//bgm控制
 		var btn = document.getElementById('btn');
@@ -133,6 +133,6 @@
 			console.log(h);
 		},1000/60);
 	</script>
-	<script src="js/login_ajax.js"></script>
+	<script src="static/js/login_ajax.js"></script>
 </body>
 </html>
