@@ -4,7 +4,7 @@ $(document).ready(function(){
 			type: "GET",
 			url: "http://172.24.194.233:8089/getSiteById",
 			dataType: "json",
-			data： {
+			data: {
 				id: 1,
 				userid: $("input[name='name']").val(),//获取用户id
 				userpassword: $("input[name='password']").val()//获取用户密码
@@ -14,6 +14,7 @@ $(document).ready(function(){
 				// $.cookies.set("userid",userid);
 				$.cookie('userid',$("input[name='name']").val(),{expires:30,path:'/'});
 				$.cookie('userpassword',$("input[name='password']").val(),{expires:30,path:'/'});
+				window.localStorage.setItem("userid",$("input[name='name']").val());
 				window.localStorage.setItem("token",data.data.token);
 			},
 			error: function(){
@@ -24,7 +25,7 @@ $(document).ready(function(){
 			type: "GET",
 			url: "userinfo",
 			dataType: "json",
-			data： {
+			data: {
 				token: window.localStorage.getItem("token")
 			},
 			success: function(data,status){

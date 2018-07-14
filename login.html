@@ -16,21 +16,44 @@
 			<form class="ui form">
 			  <div class="field">
 			    <label>User</label>
-			    <input name="name" type="text" placeholder="例：1607020412">
+			    <div class="ui icon input">
+			    	<input name="name" type="text" placeholder="例：1607020412">
+			    	<i class="users icon"></i>
+			    </div>
 			  </div>
 			  <div class="field">
 			    <label>Password</label>
-			    <input name="password" type="password" placeholder="例：noe123456">
+			    <div class="ui icon input">
+			    	<input name="password" type="password" placeholder="例：noe123456">
+			    	<i class="terminal icon"></i>
+			    </div>
 			  </div>
 			  <div class="ui submit blue button" id="noe_submit">Submit</div>
 			  <div class="ui error message"></div>
 			</form>
 		</div>
 	</div>
+	<div class="music">
+		<img id="btn" src="images/music.png" alt="">
+		<img src="images/music1.png" alt="">
+		<img src="images/music2.png" alt="">
+	</div>
+	<audio id="music" src="E:\git\SMF\images\bgm.mp3" autoplay="autoplay" loop controls="true"></audio>
 	<canvas id="canvas"></canvas>
 	<script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
 	<script rel="stylesheet" href="Semantic-UI-CSS-master/semantic.js"></script>
 	<script>
+		//bgm控制
+		var btn = document.getElementById('btn');
+		var music = document.getElementById('music');
+		btn.onclick=function(){
+			if(music.paused){
+				music.play();
+			}else{
+				music.pause();
+			}
+		}
+		//背景球
 		var canvas = document.getElementById('canvas');
 		var w,h;
 		var aColor=["#E03636","#FF534D","#25c6FC","#EDD0BE","#7F1874"];

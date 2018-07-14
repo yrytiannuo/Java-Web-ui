@@ -175,7 +175,7 @@
 			    <div class="ui top attached tabular menu">
 			      <a class="item active" data-tab="second/a">部门介绍</a>
 			      <a class="item" data-tab="second/b">部门人员</a>
-			      <a class="item" data-tab="second/c">部门机密</a>
+			      <a class="item" data-tab="second/c">部门运作</a>
 			    </div>
 			    <div class="ui bottom attached tab segment active" data-tab="second/a">
 			    	<h2 class="ui center aligned icon header">
@@ -632,16 +632,34 @@
 			  <div class="ui tabular secondary menu">
 			    <a class="item active" data-tab="first">部门报表</a>
 			    <a class="item noe_sections_manage" data-tab="second">
-			    	管理部门<div class="floating ui blue label"> ！</div>
+			    	部门申请<div class="floating ui blue label"> ！</div>
 			    </a>
+			    <a class="item " data-tab="third">部门人员</a>
 			  </div>
 			  <div class="ui tab segment active" data-tab="first">
 			    <div class="ui top attached tabular menu">
-			      <a class="item active" data-tab="first/a">报表1</a>
-			      <a class="item" data-tab="first/b">报表2</a>
+			      <a class="item active" data-tab="first/a">部门报表</a>
+			      <a class="item" data-tab="first/b">部门人员业绩</a>
 			    </div>
-			    <div class="ui bottom attached tab segment active" data-tab="first/a">1A</div>
-			    <div class="ui bottom attached tab segment" data-tab="first/b">1B</div>
+			    <div class="ui bottom attached tab segment active" data-tab="first/a">
+			    	<div class="charts">
+			    		<div class="chart1" style="width: 355px;height: 400px;float: left;">
+			    			<h3 class="ui header">人员离职报表</h3>
+							<div id="main1" style="width: 355px;height: 400px;"></div>
+			    		</div>
+			    		<div class="chart2" style="width: 355px;height: 400px;float: left;">
+			    			<h3 class="ui header">人员调职报表</h3>
+							<div id="main2" style="width: 355px;height: 400px;"></div>
+			    		</div>
+			    		<div class="chart3" style="width: 600px;height: 400px;float: left;">
+			    			<h3 class="ui header">年度部门支入支出报表</h3>
+							<div id="main3" style="width: 600px;height: 400px;"></div>
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="ui bottom attached tab segment" data-tab="first/b">
+			    	
+				</div>
 			  </div>
 			  <div class="ui tab segment" data-tab="second">
 			    <div class="ui top attached tabular menu">
@@ -674,55 +692,195 @@
 					    </div>
 						<span>要走的路！</span>
 						<div class="noe_sections_buttons">
-							<button class="ui orange button">
-						  	  查看详情
-							</button>
-							<button class="ui red button">
-						  	  确认
-							</button>
-							<button class="ui button">
-							  丢弃
-							</button>
+							<button class="ui orange button">查看详情</button>
+							<button class="ui red button">确认</button>
+							<button class="ui button">丢弃</button>
 						</div>
 					</div>
+			    </div>
+			  </div>
+			  <div class="ui tab segment" data-tab="third">
+			    <div class="ui top attached tabular menu">
+			      <a class="item active" data-tab="third/a">人员管理</a>
+			    </div>
+			    <div class="ui bottom attached tab segment active noe_people_manage" data-tab="third/a">
+			    	<div class="ui floating message">
+					  <span>1607020412</span><span>叶义武</span><span>男</span><span>设计部</span>
+					  <div class="buttons">
+					  	<button class="ui primary button">编辑</button><button class="ui button">删除</button>
+					  </div>
+					</div>
+					<div class="ui floating message">
+					  <span>1607020412</span><span>叶义武</span><span>男</span><span>部门</span>
+					  <div class="buttons">
+					  	<button class="ui primary button">编辑</button><button class="ui button">删除</button>
+					  </div>
+					</div>
+					<button class="ui red button">新增人员</button>
 			    </div>
 			  </div>
 			</div>
 			<div id="context2">
 			  <div class="ui tabular secondary menu">
-			    <a class="item active" data-tab="first">个人信息3</a>
-			    <a class="item" data-tab="second">我的部门</a>
-			    <a class="item " data-tab="third">我的小组</a>
+			    <a class="item active" data-tab="first">公司财务</a>
+			    <a class="item" data-tab="second">公司部门</a>
 			  </div>
 			  <div class="ui tab segment active" data-tab="first">
 			    <div class="ui top attached tabular menu">
-			      <a class="item active" data-tab="first/a">1A</a>
-			      <a class="item" data-tab="first/b">1B</a>
-			      <a class="item" data-tab="first/c">1C</a>
+			      <a class="item active" data-tab="first/a">公司收入总额</a>
+			      <a class="item" data-tab="first/b">公司支出总额</a>
 			    </div>
-			    <div class="ui bottom attached tab segment active" data-tab="first/a">1A</div>
-			    <div class="ui bottom attached tab segment" data-tab="first/b">1B</div>
-			    <div class="ui bottom attached tab segment" data-tab="first/c">1C</div>
+			    <div class="ui bottom attached tab segment active" data-tab="first/a">
+			    	22
+					MEMBERS
+					<div class="ui statistics">
+					  <div class="statistic">
+					    <div class="value">
+					      22
+					    </div>
+					    <div class="label">
+					      Faves
+					    </div>
+					  </div>
+					  <div class="statistic">
+					    <div class="value">
+					      31,200
+					    </div>
+					    <div class="label">
+					      Views
+					    </div>
+					  </div>
+					  <div class="statistic">
+					    <div class="value">
+					      22
+					    </div>
+					    <div class="label">
+					      Members
+					    </div>
+					  </div>
+					</div>
+			    </div>
+			    <div class="ui bottom attached tab segment" data-tab="first/b">
+			    	<div class="ui statistics">
+					  <div class="statistic">
+					    <div class="value">
+					      22
+					    </div>
+					    <div class="label">
+					      Saves
+					    </div>
+					  </div>
+					  <div class="statistic">
+					    <div class="text value">
+					      Three<br>
+					      Thousand
+					    </div>
+					    <div class="label">
+					      Signups
+					    </div>
+					  </div>
+					  <div class="statistic">
+					    <div class="value">
+					      <i class="plane icon"></i> 5
+					    </div>
+					    <div class="label">
+					      Flights
+					    </div>
+					  </div>
+					  <div class="statistic">
+					    <div class="value">
+					      <img src="http://www.semantic-ui.cn/images/avatar/small/joe.jpg" class="ui circular inline image">
+					      42
+					    </div>
+					    <div class="label">
+					      Team Members
+					    </div>
+					  </div>
+					</div>
+			    </div>
 			  </div>
 			  <div class="ui tab segment" data-tab="second">
 			    <div class="ui top attached tabular menu">
-			      <a class="item active" data-tab="second/a">2A</a>
-			      <a class="item" data-tab="second/b">2B</a>
-			      <a class="item" data-tab="second/c">2C</a>
+			      <a class="item active" data-tab="second/a">查看部门</a>
+			      <a class="item" data-tab="second/b">部门人员</a>
+			      <a class="item" data-tab="second/c">新建部门</a>
 			    </div>
-			    <div class="ui bottom attached tab segment active" data-tab="second/a">2A</div>
-			    <div class="ui bottom attached tab segment" data-tab="second/b">2B</div>
-			    <div class="ui bottom attached tab segment" data-tab="second/c">2C</div>
-			  </div>
-			  <div class="ui tab segment" data-tab="third">
-			    <div class="ui top attached tabular menu">
-			      <a class="item active" data-tab="third/a">3A</a>
-			      <a class="item" data-tab="third/b">3B</a>
-			      <a class="item" data-tab="third/c">3C</a>
+			    <div class="ui bottom attached tab segment active" data-tab="second/a">
+			    	<div class="noe_super_section1">
+			    		<h2 class="ui center aligned icon header">
+						  <i class="circular users icon"></i>
+						  设计部
+						</h2>
+			    	</div>
 			    </div>
-			    <div class="ui bottom attached tab segment active" data-tab="third/a">3A</div>
-			    <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
-			    <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+			    <div class="ui bottom attached tab segment" data-tab="second/b">
+			    	<div class="ui people shape">
+					  <div class="sides">
+					    <div class="side active">
+					      <div class="ui card">
+					        <div class="image">
+					          <img src="http://www.semantic-ui.cn/images/avatar/large/steve.jpg">
+					        </div>
+					        <div class="content">
+					          <div class="header">斯蒂夫·乔布斯</div>
+					          <div class="meta">
+					            <a>熟人</a>
+					          </div>
+					          <div class="description">
+					            斯蒂夫·乔布斯是一个伟大的设计者。
+					          </div>
+					        </div>
+					        <div class="extra content">
+					          <span class="right floated">
+					            2014年参加
+					          </span>
+					          <span>
+					            <i class="user icon"></i>
+					            151个朋友
+					          </span>
+					        </div>
+					      </div>
+					    </div>
+					    <div class="side">
+					      <div class="ui card">
+					        <div class="image">
+					          <img src="http://www.semantic-ui.cn/images/avatar/large/stevie.jpg">
+					        </div>
+					        <div class="content">
+					          <a class="header">Stevie Feliciano</a>
+					          <div class="meta">
+					            <span class="date">2014年加入<!--/span-->
+					          </span></div>
+					          <div class="description">
+					            Stevie Feliciano是一个生活在纽约的图书馆学家。她喜欢把时间花在读书、跑步和写作上。
+					          </div>
+					        </div>
+					        <div class="extra content">
+					          <a>
+					            <i class="user icon"></i>
+					            22个朋友
+					          </a>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+			    </div>
+			    <div class="ui bottom attached tab segment noe_sections_manager" data-tab="second/c">
+			    	<div class="ui floating message">
+					  <span>部门编号</span><span>设计部</span><span>100人</span><span></span>
+					  <div class="buttons">
+					  	<button class="ui primary button">编辑</button><button class="ui button">删除</button>
+					  </div>
+					</div>
+					<div class="ui floating message">
+					  <span>1607020412</span><span>叶义武</span><span>男</span><span>部门</span>
+					  <div class="buttons">
+					  	<button class="ui primary button">编辑</button><button class="ui button">删除</button>
+					  </div>
+					</div>
+					<button class="ui red button">新增部门</button>
+			    </div>
 			  </div>
 			</div>
 		</div>
@@ -838,15 +996,90 @@
 		    </div>
 		  </div>
 		</div>
+		<!-- 模态框 编辑 -->
+		<div class="ui long text modal transition scrolling noe_modal4">
+		  <i class="close icon"></i>
+		  <div class="header">
+		    编辑信息
+		  </div>
+		  <div class="image content">
+		  	<form class="ui form">
+			      <div class="field">
+			      	<label>工号</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>姓名</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>性别</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>部门</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			</form>
+		  </div>
+		  <div class="actions">
+		    <div class="ui black deny button">
+		      取消
+		    </div>
+		    <div class="ui positive right labeled icon button">
+		      确定
+		      <i class="checkmark icon"></i>
+		    </div>
+		  </div>
+		</div>
+		<!-- 模态框 新增人员 -->
+		<div class="ui long text modal transition scrolling noe_modal5">
+		  <i class="close icon"></i>
+		  <div class="header">
+		    新增人员
+		  </div>
+		  <div class="image content">
+		  	<form class="ui form">
+			      <div class="field">
+			      	<label>工号</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>姓名</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>性别</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			      <div class="field">
+			      	<label>部门</label>
+			        <input type="text" name="username" placeholder="姓名">
+			      </div>
+			</form>
+		  </div>
+		  <div class="actions">
+		    <div class="ui black deny button">
+		      取消
+		    </div>
+		    <div class="ui positive right labeled icon button">
+		      确定
+		      <i class="checkmark icon"></i>
+		    </div>
+		  </div>
+		</div>
+
 
   	</div>
 
   	<script type="text/javascript" src="static/jquery/jquery-3.2.1.min.js"></script>
+  	<script type="text/javascript" src="static/echarts.js"></script>
     <script type="text/javascript" src="static/semantic/semantic.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/ajax.js"></script>
   	<script>
-  		$('#menu').click(function(){
+
+        $('#menu').click(function(){
   			$('.ui.sidebar').sidebar('toggle');
   		});
   		// $('.paths.example .menu .item')

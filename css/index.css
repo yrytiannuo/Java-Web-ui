@@ -53,9 +53,31 @@
 .ui.attached .ui.message .label{
 	display: inline-block;
 }
-
-
-
+.charts{
+	width: 100%;
+	overflow: hidden;
+}
+.noe_people_manage,
+.noe_sections_manager{
+	overflow:hidden;
+	position: relative;
+}
+.noe_people_manage span,
+.noe_sections_manager span{
+	margin-right:15%;
+}
+.noe_people_manage .buttons,
+.noe_sections_manager .buttons{
+	position: absolute;
+	right: 10px;
+	top:6px;
+}
+.noe_modal4 .ui.form{
+	width: 100%;
+}
+.noe_modal5 .ui.form{
+	width: 100%;
+}
 
 
 

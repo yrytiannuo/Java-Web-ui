@@ -115,14 +115,15 @@ $(document).ready(function(){
 		var $ele = $("<div class='ui floating message'><div class='label'><img src='http://www.semantic-ui.cn/images/avatar/small/elliot.jpg'></div><span>要走的路！</span><div class='noe_sections_buttons'><button class='ui orange button'>查看详情</button><button class='ui primary button'>确认</button><button class='ui button'>丢弃</button></div></div>");
 		$('#context1 .ui.bottom[data-tab="second/a"]').append($ele);
 	});*/
-	/*//部长接受调职离职的申请
+	/*//部长查看调职离职的申请
 	$('.noe_sections_manage').on('click',function(){
 		$.ajax({
 			type: "GET",
 			url: "http://172.24.194.233:8089/getSiteById",
 			dataType: "json",
 			data: {
-				token: window.localStorage.getItem("token")
+				token: window.localStorage.getItem("token"),
+				userid: window.localStorage.getItem("userid")
 			},
 			success: function(data,status){
 				var count1=0,count0=0;
@@ -143,7 +144,63 @@ $(document).ready(function(){
 			}
 		});
 	});*/
-
+	/*//部长选择处理调职离职申请 丢弃操作
+	$('.ui.floating.message .ui.button:last-child').on('click',function(){
+		$(this).closest('.ui.floating.message').remove();
+		$.ajax({
+				type: "POST",
+				url: "http://172.24.194.233:8089/getSiteById",
+				dataType: "json",
+				data: {
+					token: window.localStorage.getItem("token"),
+					username: $(this).closest('.ui.floating.message').find('span').innerHTML
+				},
+				success: function(data,status){
+					alert("丢弃！");
+				},
+				error: function(){
+					alert("发生错误！" + jqXHR.status);
+				}
+			});
+	});
+	//确认操作
+	$('.ui.floating.message .ui.button:nth-child(2)').on('click',function(){
+		$(this).closest('.ui.floating.message').remove();
+		$.ajax({
+				type: "POST",
+				url: "http://172.24.194.233:8089/getSiteById",
+				dataType: "json",
+				data: {
+					token: window.localStorage.getItem("token"),
+					username: $(this).closest('.ui.floating.message').find('span').innerHTML
+				},
+				success: function(data,status){
+					alert("确认！");
+				},
+				error: function(){
+					alert("发生错误！" + jqXHR.status);
+				}
+			});
+	});
+	//查看详情
+	$('.ui.floating.message .ui.button:nth-child(1)').on('click',function(){
+			$.ajax({
+				type: "GET",
+				url: "http://172.24.194.233:8089/getSiteById",
+				dataType: "json",
+				data: {
+					token: window.localStorage.getItem("token"),
+					username: $(this).closest('.ui.floating.message').find('span').innerHTML
+				},
+				success: function(data,status){
+					$('.noe_modal3 .image.content textarea')[0].innerHTML = data.data.申请信;
+					$('.ui.modal.noe_modal3').modal('show');
+				},
+				error: function(){
+					alert("发生错误！" + jqXHR.status);
+				}
+			});
+	});*/
 
 
 
